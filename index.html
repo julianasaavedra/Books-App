@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Love Books</title>
+    <link rel="icon" href="icon.png" type="image/gif" sizes="16x16" />
+    <style>
+      .wrapper {
+        text-align: center;
+        margin: 50px 200px;
+      }
+      h1 {
+        font-size: 40px;
+      }
+      h2 {
+        font-size: 35px;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      img {
+        max-width: 50%;
+        max-height: 400px;
+      }
+      .text {
+        font-size: 20px;
+        text-align: justify;
+      }
+      a {
+        color: blue;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      button {
+        border-radius: 10px;
+        margin: 20px auto;
+        display: block;
+        background-color: #fff;
+        border: 1px solid blue;
+        color: blue;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 22px;
+        padding: 16px 24px;
+        text-decoration: none;
+        transition: all 200ms ease;
+      }
+      button:hover {
+        color: #fff;
+        background: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>I <span style="color: blue">love</span> books</h1>
+      <h2>Especially Harry Potter books!</h2>
+      <hr />
+      <img
+        src="https://images-na.ssl-images-amazon.com/images/I/71awKYpDjML.jpg"
+        alt="Harry Potter Books"
+      />
+      <hr />
+      <p class="text">
+        <strong>Harry Potter</strong> is a series of seven fantasy novels
+        written by British author, J. K. Rowling. The novels chronicle the lives
+        of a young wizard, Harry Potter, and his friends Hermione Granger and
+        Ron Weasley, all of whom are students at Hogwarts School of Witchcraft
+        and Wizardry.
+      </p>
+      <br />
+      <a href="https://en.wikipedia.org/wiki/Harry_Potter">Learn More!</a>
+      <button>Buy Harry Potter Books</button>
+      <p class="footer">Coded by <em>Juliana</em>📚</p>
+    </div>
+    <script>
+      function emailSubscription() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email?");
+        let h1 = document.querySelector("h1");
+        if (name.length > 0) {
+          h1.innerHTML =
+            "Thank you, " + name + " !We will be intouch by email soon!";
+        } else {
+          emailSubscription();
+        }
+      }
+      let button = document.querySelector("button");
+      button.addEventListener("click", emailSubscription);
+    </script>
+  </body>
+</html>
